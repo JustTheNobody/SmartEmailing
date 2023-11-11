@@ -1,0 +1,10 @@
+.fa-4{
+    font-size: 1.5rem;
+}
+.times{
+    top: -.5rem;
+}
+.uk-accordion-title::before{
+    display: none;
+    visibility: hidden;
+}
