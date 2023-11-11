@@ -11,7 +11,7 @@
     <td>{{$item->address}}</td>
     <td>
         <span class="uk-text-right">
-        <a href="https://www.google.com/maps?q={{$item->lat}},{{$item->lon}}" uk-tooltip="google map" target="_blank" class="fa-4">
+        <a href="https://www.google.com/maps?q={{$item->lat}},{{$item->lon}}" data-lat="{{$item->lat}}" data-lon="{{$item->lon}}" uk-tooltip="google map" target="_blank" class="mapLink fa-4">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
         </a>
         @if($item->link)

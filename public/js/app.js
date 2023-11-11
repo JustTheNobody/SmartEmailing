@@ -29,4 +29,16 @@ $(document).ready(function() {
         $('a#'+id).attr('href',  href + timestamp);
         window.location.href = href + timestamp;
     });
+
+    $('.mapLink').on('click', function(event){
+        event.preventDefault();
+        lat = $(this).data('lat');
+        lon = $(this).data('lon');
+        src = $('#mapFrame').attr('src');
+        src = src.replace(/(\?q=)[^&]+(&hl=)/, '$1' + lat + ',' + lon + '$2');
+
+        $('#mapFrame').attr('src', src);
+
+        UIkit.modal('#map').show();
+    });
 });

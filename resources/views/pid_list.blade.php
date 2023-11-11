@@ -61,4 +61,26 @@
             {{ $pid_list->links() }}
         </div>
     </div>
+
+    <button uk-toggle="target: #map" type="button">open</button>
+
+    <div id="map" uk-modal>
+        <div class="uk-modal-dialog uk-padding-remove uk-modal-body">
+            <h2 class="uk-modal-title"></h2>
+            <a class="uk-modal-close uk-align-right uk-margin-right" type="button"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <div style="width: 100%">
+                <iframe
+                    width="100%"
+                    height="600"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                    id="mapFrame"
+                    src="https://maps.google.com/maps?q=MAP_LAT,MAP_LON&hl=es&z=17&amp;output=embed"
+                >
+               </iframe>
+            </div>
+        </div>
+    </div>
 @endsection
