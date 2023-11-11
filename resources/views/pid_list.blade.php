@@ -1,7 +1,9 @@
 @extends('app')
 
 @section('content')
-
+    <div>
+        <a href="{{route('home')}}" class="uk-align-left uk-button uk-button-primary">Home</a>
+    </div>
     <div class="uk-margin-large-top">
         <div class="uk-margin-bottom uk-flex uk-flex-middle uk-flex-center uk-text-bold">
             Records count:
