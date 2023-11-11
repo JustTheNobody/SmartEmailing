@@ -43,7 +43,7 @@
             </li>
         </ul>
     </div>
-    <div class="uk-margin-large-top">
+    <div class="uk-margin-large-top uk-text-center">
         <a href="{{route('pid_list')}}" class="uk-button uk-button-primary">Show Pids</a>
     </div>
 </div>
