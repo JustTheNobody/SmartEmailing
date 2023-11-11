@@ -20,8 +20,6 @@ class PidSalesController extends Controller
             $dayTime = ($this->getDayTime( $request ));
 
             $pidSale = PidSales::with([
-                'pidDayTimeSlots.day',
-                'pidDayTimeSlots.pidTimeSlots',
                 'type',
                 'services',
                 'payMethod'
@@ -36,7 +34,6 @@ class PidSalesController extends Controller
 
 
             $pidSale = PidSales::with([
-                                'pidDayTimeSlots',
                                 'type',
                                 'services',
                                 'payMethod'

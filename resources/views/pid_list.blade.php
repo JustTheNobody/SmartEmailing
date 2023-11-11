@@ -36,8 +36,8 @@
                     <th>name</th>
                     <th>address</th>
                     <th>links</th>
-                    <th>service</th>
-                    <th>payMethod</th>
+                    <th>remarks</th>
+                    <th>service | payMethod</th>
                 </tr>
             </thead>
             <tbody id="pidTable">

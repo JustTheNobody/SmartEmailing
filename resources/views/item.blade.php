@@ -21,12 +21,13 @@
         @endif
         </span>
     </td>
+    <td>{{$item->remarks}}</td>
     <td>
         <span class="uk-badge">
             {{$item->payMethod->id}}
         </span>
+        | {{$item->services->pid_id}}
     </td>
-    <td>{{$item->services->pid_id}}</td>
 </tr>
 <tr class="uk-position-relative times">
     <td colspan="7" class="uk-padding-remove">
