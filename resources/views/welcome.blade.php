@@ -1,5 +1,7 @@
 @extends('app')
-
+@section('title')
+    Home
+@endsection
 @section('content')
 <div class="">
     <div class="">
