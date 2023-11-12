@@ -32,7 +32,7 @@ class PidSales extends Model
         'lat',
         'lon',
         'pid_service_id',
-        'pid_pay_method',
+        'pid_pay_method_id',
         'link',
         'remarks',
     ];
@@ -77,6 +77,8 @@ class PidSales extends Model
 
                 $type_id            = PidTypes::firstOrCreate(['type' => $data['type']]);
                 $pid_pay_method_id  = pidPayMethods::firstOrCreate(['id' => $data['payMethods']]);
+
+
                 if( $data['services'] )
                     $pid_service_id     = pidServices::updateOrCreate(['pid_id' => $data['services']]);
 

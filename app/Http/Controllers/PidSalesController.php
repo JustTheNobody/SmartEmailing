@@ -52,7 +52,7 @@ class PidSalesController extends Controller
     public function import()
     {
         (new PidSales)->getPidData();
-        return redirect('pid_list')->with('success', 'data imported');
+        return redirect('pid_list')->with(['success' => 'data imported']);
     }
 
     /**
@@ -79,15 +79,18 @@ class PidSalesController extends Controller
 
     public function destroy()
     {
-        $tables = ['pid_sales', 'pid_services', 'pid_time_slots', 'pid_types', 'pid_pay_methods'];
+        $tables = ['pid_day_time_slots', 'pid_sales', 'pid_time_slots'];
 
-        try{
+        try {
+            DB::statement('SET FOREIGN_KEY_CHECKS=0');
+
             foreach ($tables as $table) {
                 DB::table($table)->truncate();
             }
-            return back()->with(['success', 'data deleted']);
-        }catch(Exception $e){
-            return back()->with(['fail', $e->getMessage()]);
+        } finally {
+            DB::statement('SET FOREIGN_KEY_CHECKS=1');
         }
+
+        return back()->with(['success' => 'data deleted']);
     }
 }
