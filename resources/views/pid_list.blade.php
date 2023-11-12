@@ -13,7 +13,9 @@
             <span class="uk-text-lead uk-padding-small uk-margin-left uk-margin-right uk-background-secondary uk-light uk-border-circle">
                 {{$pid_list->total()}}
             </span>
-            for {{ \Carbon\Carbon::createFromTimestamp(app('request')->input('time'))->format('l') }} at {{ date('H:i', app('request')->input('time')) }}
+            @if( app('request')->input('time') )
+                for {{ \Carbon\Carbon::createFromTimestamp(app('request')->input('time'))->format('l') }} at {{ date('H:i', app('request')->input('time')) }}
+            @endif
         </div>
         <div>
             <h3>Filter</h3>
