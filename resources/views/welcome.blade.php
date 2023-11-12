@@ -29,8 +29,14 @@
         <ul class="uk-list">
             <li>
                 <p>Domácí úkol je postaven na farameworku Laravel.</p>
-                Vytvořená databáze:
+                <div class="uk-textarea uk-grid-small uk-child-width-1-2" uk-grid>
+                    <div class="uk-margin-remove uk-text-right uk-text-muted">Laravel v:</div><div class="uk-margin-remove">10.31.0</div>
+                    <div class="uk-margin-remove uk-text-right uk-text-muted">Php:</div><div class="uk-margin-remove">8.2.7</div>
+                    <div class="uk-margin-remove uk-text-right uk-text-muted">Database:</div><div class="uk-margin-remove">10.5.13-MariaDB</div>
+                </div>
+
                 <ul>
+                    <b>Vytvořená databáze:</b>
                     <li>tabulka pid_sales obsahuje data a cizí klíče k tabulkám, do kterých byli přesunuty opakující se informace. Tabulky pid_service_id a pid_pay_method_id nemají vyplněn slopec s názvem a to zdůvodu že jsem potřeblé informace na webu https://pid.cz/o-systemu/opendata/ nanalez</li>
                     <li>tabulka pid_day_time_slots je pivot table</li>
                     <li>tabulka pid_time_slots byla vytvořena z důvodu možnosti filtrace časů, které jsou u PID </li>
