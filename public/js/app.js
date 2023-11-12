@@ -53,29 +53,3 @@ $(document).ready(function() {
         }
     });
 });
-
-function internalMessage(statu, message) {
-    if( message ){
-        if (isJson(message)) {
-            var obj = JSON.parse(message);
-            $.each(obj, function(key, value) {
-
-                getMessageWeight( key, value );
-            });
-        } else {
-            getMessageWeight(statu, message );
-        }
-    }
-}
-
-function getMessageWeight( key, message )
-{
-    if (key == 'success') {
-        ico = '<i class="fa fa-check uk-text-success uk-margin-right" aria-hidden="true"></i>'
-    } else if (key == 'fail') {
-        ico = '<i class="fa fa-times uk-text-danger uk-margin-right" aria-hidden="true"></i>'
-    } else {
-        ico = '<i class="fa fa-info uk-text-primary uk-margin-right" aria-hidden="true"></i>'
-    }
-    UIkit.notification({ message: ico + '<span class="uk-text-bolder uk-text-large">' + message.charAt(0).toUpperCase() + message.slice(1) + '</span>', status: key });;
-}

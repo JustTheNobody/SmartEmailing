@@ -31,14 +31,15 @@
         </footer>
     </div>
 
-    {{--uk-notification-message TO ReDO - is it in use now?--}}
-    @foreach( ['success', 'fail', 'info'] as $type )
-        @if(session($type))
-            <script>
-                internalMessage('{{ $type }}', "{{ session($type) }}");
-            </script>
-        @endif
-    @endforeach
+    @if(session('success'))
+        <script>
+            UIkit.notification( "{{ session('success') }}" );
+        </script>
+    @elseif(session('fail'))
+        <script>
+            UIkit.notification( "{{ session('fail') }}" );
+        </script>
+    @endif
 
 </body>
 </html>

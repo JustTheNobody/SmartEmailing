@@ -49,7 +49,6 @@ class PidSalesController extends Controller
         ]);
     }
 
-    //return void
     public function import()
     {
         (new PidSales)->getPidData();
@@ -78,7 +77,6 @@ class PidSalesController extends Controller
         return ['day' => $dayOfWeek, 'time' => $formattedTime];
     }
 
-    //return void
     public function destroy()
     {
         $tables = ['pid_sales', 'pid_services', 'pid_time_slots', 'pid_types', 'pid_pay_methods'];
