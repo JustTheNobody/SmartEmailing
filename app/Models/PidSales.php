@@ -27,12 +27,12 @@ class PidSales extends Model
     protected $fillable = [
         'id',
         'pid_type_id',
+        'pid_service_id',
+        'pid_pay_method_id',
         'name',
         'address',
         'lat',
         'lon',
-        'pid_service_id',
-        'pid_pay_method_id',
         'link',
         'remarks',
     ];

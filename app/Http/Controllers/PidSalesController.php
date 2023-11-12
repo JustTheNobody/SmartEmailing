@@ -77,6 +77,7 @@ class PidSalesController extends Controller
         return ['day' => $dayOfWeek, 'time' => $formattedTime];
     }
 
+    // TODO move to base model
     public function destroy()
     {
         $tables = ['pid_day_time_slots', 'pid_sales', 'pid_time_slots'];
