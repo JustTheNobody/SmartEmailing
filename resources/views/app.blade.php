@@ -9,6 +9,7 @@
     <script src="{{ asset('/js/jquery-3.6.1.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/js/uikit.min.js') }}"></script>
     <script src="{{ asset('/js/app.js') }}"></script>
+    <link href="/img/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/uikit.min.css') }}" />
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/app.css">
