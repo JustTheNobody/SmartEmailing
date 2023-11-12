@@ -1,5 +1,7 @@
 @extends('app')
-
+@section('title')
+    Pid list
+@endsection
 @section('content')
     <div class="uk-align-right">
         <a href="{{route('destroy_pids')}}" id="deleteData" class="uk-align-left uk-button uk-button-danger">Delete data</a>
