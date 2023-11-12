@@ -65,7 +65,7 @@ class PidSales extends Model
 
         if ($response->successful()) {
             $jsonContent = $response->body();
-            $dataArray = json_decode($jsonContent);
+            $dataArray = json_decode($jsonContent, true);
 
 
             $openingHours = [];

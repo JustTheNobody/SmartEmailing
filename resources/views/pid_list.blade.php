@@ -1,6 +1,9 @@
 @extends('app')
 
 @section('content')
+    <div class="uk-align-right">
+        <a href="{{route('destroy_pids')}}" id="deleteData" class="uk-align-left uk-button uk-button-danger">Delete data</a>
+    </div>
     <div>
         <a href="{{route('home')}}" class="uk-align-left uk-button uk-button-primary">Home</a>
     </div>
@@ -63,8 +66,6 @@
             {{ $pid_list->links() }}
         </div>
     </div>
-
-    <button uk-toggle="target: #map" type="button">open</button>
 
     <div id="map" uk-modal>
         <div class="uk-modal-dialog uk-padding-remove uk-modal-body">

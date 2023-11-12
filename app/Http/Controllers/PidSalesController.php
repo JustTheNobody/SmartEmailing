@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use App\Models\PidSales;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -52,7 +53,7 @@ class PidSalesController extends Controller
     public function import()
     {
         (new PidSales)->getPidData();
-        return redirect('pid_list')->with('success', 'imported');
+        return redirect('pid_list')->with('success', 'data imported');
     }
 
     /**
@@ -75,5 +76,20 @@ class PidSalesController extends Controller
         $dayOfWeek = $carbonInstance->format('l');
 
         return ['day' => $dayOfWeek, 'time' => $formattedTime];
+    }
+
+    //return void
+    public function destroy()
+    {
+        $tables = ['pid_sales', 'pid_services', 'pid_time_slots', 'pid_types', 'pid_pay_methods'];
+
+        try{
+            foreach ($tables as $table) {
+                DB::table($table)->truncate();
+            }
+            return back()->with(['success', 'data deleted']);
+        }catch(Exception $e){
+            return back()->with(['fail', $e->getMessage()]);
+        }
     }
 }
