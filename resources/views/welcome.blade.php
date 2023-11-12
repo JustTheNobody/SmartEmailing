@@ -29,6 +29,7 @@
         <ul class="uk-list">
             <li>
                 Vytvořená databáze:
+                <p>Domácí úkol je postaven na farameworku Laravel.</p>
                 <ul>
                     <li>tabulka pid_sales obsahuje data a cizí klíče k tabulkám, do kterých byli přesunuty opakující se informace. Tabulky pid_service_id a pid_pay_method_id nemají vyplněn slopec s názvem a to zdůvodu že jsem potřeblé informace na webu https://pid.cz/o-systemu/opendata/ nanalez</li>
                     <li>tabulka pid_day_time_slots je pivot table</li>
